@@ -12,8 +12,9 @@ mode.addEventListener("change", () => {
     line.style.color = "#6B7280"
     hr.style.color = "#E8E7E9"
     headline2.style.color = "#10B981"
-    
-    
+    document.querySelectorAll(".length-label").forEach(label => {
+    label.style.color = "#000000";
+});
   } else {
     headline2.style.color = "#55F991"
     headline.style.color = "aliceblue";
