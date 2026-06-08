@@ -29,6 +29,7 @@ const numberChars = "0123456789";
 const specialChars = "!@#$%^&*";
 
 const generatePassword = (length) => {
+  
   const allChars = `${lowercaseChars}${uppercaseChars}${numberChars}${specialChars}`;
   let password = "";
 
@@ -40,10 +41,16 @@ const generatePassword = (length) => {
 };
 
 const displayPassword = () => {
+  const length1 = parseInt(
+  document.getElementById("length1").value
+  );
+  const length2 = parseInt(
+  document.getElementById("length2").value
+  );
   let dPassword1 = document.querySelector(".Password1");
-  dPassword1.textContent = generatePassword(13);
+  dPassword1.textContent = generatePassword(length1);
   let dPassword2 = document.querySelector(".Password2");
-  dPassword2.textContent = generatePassword(12);
+  dPassword2.textContent = generatePassword(length2);
 };
 
 document.getElementById("btn").addEventListener("click", displayPassword);
